@@ -26,3 +26,8 @@ document.getElementById('register-form').addEventListener('submit', async (event
         document.getElementById('message').textContent = 'Registration failed.';
     }
 });
+
+document.getElementById('clear-keys').addEventListener('click', () => {
+    localStorage.removeItem('credentialId');
+    document.getElementById('message').textContent = 'Attached keys cleared!';
+});

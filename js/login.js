@@ -28,3 +28,8 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
         document.getElementById('message').textContent = 'Login failed.';
     }
 });
+
+document.getElementById('clear-keys').addEventListener('click', () => {
+    localStorage.removeItem('credentialId');
+    document.getElementById('message').textContent = 'Attached keys cleared!';
+});
